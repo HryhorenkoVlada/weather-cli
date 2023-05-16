@@ -19,3 +19,16 @@ export const printHelp = () => {
         without any arguments - to show the weather`
   );
 };
+
+export const printWeather = (data, icon) => {
+  console.log(`
+      ${chalk.bgBlue(' WEATHER ')}
+      Weather for ${data.name}:
+      ${icon} ${data.weather[0].description}
+      Temperature: ${data.main.temp}°C
+      Feels like: ${data.main.feels_like}°C
+      Humidity: ${data.main.humidity}%
+      Pressure: ${data.main.pressure}hPa
+      Wind: ${data.wind.speed}m/s
+    `);
+};
