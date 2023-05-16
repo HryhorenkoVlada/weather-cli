@@ -1,8 +1,13 @@
 import { homedir } from 'os';
-import { join, basename } from 'path';
+import { join } from 'path';
 import * as fs from 'fs/promises';
 
 const filePath = join(homedir(), 'weather-data.json');
+
+export const KEYS_DICTIONARY = {
+  token: 'token',
+  city: 'city',
+};
 
 const isExist = async (path) => {
   try {
